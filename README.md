@@ -81,6 +81,11 @@ The process to achieve this goal unfolds in three successive stages:
     - [9.2. Container tests](#92-container-tests)
     - [9.3. Data ML functions tests](#93-data-ml-functions-tests)
     - [9.4. API tests](#94-api-tests)
+- [10. Data Storage](#10-data-storage)
+    - [10.1. Repo Architecture ](#101-repo-architecture)
+- [11. Credits](#11-credits)
+
+
 
 ## 1. Data Sources
 
@@ -1146,3 +1151,10 @@ This testing suite is an integral part of our CI/CD pipeline, ensuring that ever
                             │   └── meta.yaml               <-
                             │           
                             └── meta.yaml                   <-
+
+
+## 10. Credits
+Project developed for non commercial purposes,
+ - Guillaume Pot
+ - Charlotte Barbey
+ - Ludovic Rochette
