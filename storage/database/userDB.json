@@ -1,0 +1,16 @@
+{
+    "ecd7e649-36b0-4d9b-ac75-cbc30f1ee8f7": {
+        "username": "admin",
+        "password": "$argon2id$v=19$m=65536,t=3,p=4$8977vzemFIJw7l1LaW0NQQ$9oFTHU+7Y1shu9ZLTE8XxFyGeEL4kEGo40BGGeVvhJ0",
+        "role": 9,
+        "bankroll": 999999,
+        "risk": "high"
+    },
+    "52fef22b-4e40-425f-bc6b-43eead4327a9": {
+        "username": "ludoroch",
+        "password": "$argon2id$v=19$m=65536,t=3,p=4$2ZtzDqH0/n9PKaW09t6bkw$jjGo9PoEXqSzAwsxY5FkkRxD6Pb9aSmkJyEndAqmOIQ",
+        "role": 0,
+        "bankroll": 100.0,
+        "risk": "medium"
+    }
+}
