@@ -1,0 +1,58 @@
+artifact_path: artifacts_English Premier League_SVC
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.10.12
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.4.1.post1
+mlflow_version: 2.11.1
+model_size_bytes: 82894
+model_uuid: 3341929cb8c5414296722ad38ab738d8
+run_id: 6d01a4711b4849c8b0bf8bd7f5de9597
+saved_input_example_info:
+  artifact_path: input_example.json
+  pandas_orient: split
+  type: dataframe
+signature:
+  inputs: '[{"type": "long", "name": "TotalMatches_Home", "required": true}, {"type":
+    "long", "name": "TotalWins_Home", "required": true}, {"type": "long", "name":
+    "TotalDraws_Home", "required": true}, {"type": "long", "name": "TotalLosses_Home",
+    "required": true}, {"type": "long", "name": "TotalGoalsScored_Home", "required":
+    true}, {"type": "long", "name": "TotalGoalsConceded_Home", "required": true},
+    {"type": "long", "name": "TotalGoalsScored_HomeTeam", "required": true}, {"type":
+    "long", "name": "TotalGoalsConceded_HomeTeam", "required": true}, {"type": "long",
+    "name": "GoalDifference_HomeTeam", "required": true}, {"type": "long", "name":
+    "TotalPoints_HomeTeam", "required": true}, {"type": "long", "name": "TotalMatches_HomeTeam",
+    "required": true}, {"type": "double", "name": "WinRatio_HomeTeam", "required":
+    true}, {"type": "double", "name": "DrawRatio_HomeTeam", "required": true}, {"type":
+    "double", "name": "LossRatio_HomeTeam", "required": true}, {"type": "double",
+    "name": "AverageGoalsScored_HomeTeam", "required": true}, {"type": "double", "name":
+    "AverageGoalsConceded_HomeTeam", "required": true}, {"type": "long", "name": "Ranking_HomeTeam",
+    "required": true}, {"type": "long", "name": "FormScore_HomeTeam", "required":
+    true}, {"type": "long", "name": "TotalMatches_Away", "required": true}, {"type":
+    "long", "name": "TotalWins_Away", "required": true}, {"type": "long", "name":
+    "TotalDraws_Away", "required": true}, {"type": "long", "name": "TotalLosses_Away",
+    "required": true}, {"type": "long", "name": "TotalGoalsScored_Away", "required":
+    true}, {"type": "long", "name": "TotalGoalsConceded_Away", "required": true},
+    {"type": "long", "name": "TotalGoalsScored_AwayTeam", "required": true}, {"type":
+    "long", "name": "TotalGoalsConceded_AwayTeam", "required": true}, {"type": "long",
+    "name": "GoalDifference_AwayTeam", "required": true}, {"type": "long", "name":
+    "TotalPoints_AwayTeam", "required": true}, {"type": "long", "name": "TotalMatches_AwayTeam",
+    "required": true}, {"type": "double", "name": "WinRatio_AwayTeam", "required":
+    true}, {"type": "double", "name": "DrawRatio_AwayTeam", "required": true}, {"type":
+    "double", "name": "LossRatio_AwayTeam", "required": true}, {"type": "double",
+    "name": "AverageGoalsScored_AwayTeam", "required": true}, {"type": "double", "name":
+    "AverageGoalsConceded_AwayTeam", "required": true}, {"type": "long", "name": "Ranking_AwayTeam",
+    "required": true}, {"type": "long", "name": "FormScore_AwayTeam", "required":
+    true}]'
+  outputs: '[{"type": "long", "required": true}]'
+  params: null
+utc_time_created: '2024-03-28 16:34:57.332652'

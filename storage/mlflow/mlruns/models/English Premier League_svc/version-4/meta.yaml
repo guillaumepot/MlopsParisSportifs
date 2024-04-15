@@ -1,0 +1,16 @@
+aliases: []
+creation_timestamp: 1712588022290
+current_stage: None
+description: null
+last_updated_timestamp: 1712588022290
+name: English Premier League_svc
+run_id: b1b1247d8db04b79ab752728273fdbbe
+run_link: null
+source: /home/guillaume/OneDrive/Developpement/repo/nov23_continu_mlops_paris_sportifs/src/data_ml_functions/../../storage/mlflow/mlruns/930471025992568204/b1b1247d8db04b79ab752728273fdbbe/artifacts/artifacts_English
+  Premier League_SVC
+status: READY
+status_message: null
+storage_location: /home/guillaume/OneDrive/Developpement/repo/nov23_continu_mlops_paris_sportifs/src/data_ml_functions/../../storage/mlflow/mlruns/930471025992568204/b1b1247d8db04b79ab752728273fdbbe/artifacts/artifacts_English
+  Premier League_SVC
+user_id: null
+version: 4

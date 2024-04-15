@@ -1,0 +1,15 @@
+artifact_uri: /home/guillaume/OneDrive/Developpement/repo/nov23_continu_mlops_paris_sportifs/src/data_ml_functions/../../storage/mlflow/mlruns/930471025992568204/6d01a4711b4849c8b0bf8bd7f5de9597/artifacts
+end_time: 1711643698802
+entry_point_name: ''
+experiment_id: '930471025992568204'
+lifecycle_stage: active
+run_id: 6d01a4711b4849c8b0bf8bd7f5de9597
+run_name: Train_English Premier League_SVC_20240328
+run_uuid: 6d01a4711b4849c8b0bf8bd7f5de9597
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1711643697323
+status: 3
+tags: []
+user_id: guillaume

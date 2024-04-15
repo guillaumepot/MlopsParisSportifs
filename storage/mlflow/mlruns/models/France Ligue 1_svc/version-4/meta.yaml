@@ -1,0 +1,16 @@
+aliases: []
+creation_timestamp: 1712588112915
+current_stage: None
+description: null
+last_updated_timestamp: 1712588112915
+name: France Ligue 1_svc
+run_id: f934ba5ae67a4199ba4702ab29f0ae35
+run_link: null
+source: /home/guillaume/OneDrive/Developpement/repo/nov23_continu_mlops_paris_sportifs/src/data_ml_functions/../../storage/mlflow/mlruns/887889439874161357/f934ba5ae67a4199ba4702ab29f0ae35/artifacts/artifacts_France
+  Ligue 1_SVC
+status: READY
+status_message: null
+storage_location: /home/guillaume/OneDrive/Developpement/repo/nov23_continu_mlops_paris_sportifs/src/data_ml_functions/../../storage/mlflow/mlruns/887889439874161357/f934ba5ae67a4199ba4702ab29f0ae35/artifacts/artifacts_France
+  Ligue 1_SVC
+user_id: null
+version: 4

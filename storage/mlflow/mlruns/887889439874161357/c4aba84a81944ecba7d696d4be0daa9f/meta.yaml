@@ -1,0 +1,15 @@
+artifact_uri: /home/guillaume/OneDrive/Developpement/repo/nov23_continu_mlops_paris_sportifs/src/data_ml_functions/../../storage/mlflow/mlruns/887889439874161357/c4aba84a81944ecba7d696d4be0daa9f/artifacts
+end_time: 1712215873521
+entry_point_name: ''
+experiment_id: '887889439874161357'
+lifecycle_stage: active
+run_id: c4aba84a81944ecba7d696d4be0daa9f
+run_name: Train_France Ligue 1_SVC_20240404
+run_uuid: c4aba84a81944ecba7d696d4be0daa9f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1712215872489
+status: 3
+tags: []
+user_id: guillaume
