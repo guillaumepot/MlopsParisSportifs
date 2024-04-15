@@ -1,0 +1,107 @@
+# This workflow will run tests :
+    # Container tests (streamlit & API)
+    # API tests (unit tests)
+    # Data pipeline tests (unit tests)
+
+name: Python application
+
+on:
+  push:
+    branches: ["prod_version"]
+  pull_request:
+    branches: ["prod_version"]
+  schedule:
+    - cron: '30 20 * * 5' # Friday 20:30
+
+permissions:
+  contents: read
+
+jobs:
+  container_tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Create common network
+      run: docker network create common_network    
+
+    - name: Build API image
+      uses: docker/build-push-action@v2
+      with:
+        context: ./src/api
+        file: ./src/api/Dockerfile.api
+        push: false
+        tags: paris_sportifs_api:latest
+
+    - name: Start API container
+      run: |
+        cd ./src/api
+        docker-compose -f docker-compose_api.yaml up -d
+        cd ../../
+        sleep 15
+
+
+    - name: Build Streamlit image
+      uses: docker/build-push-action@v2
+      with:
+        context: ./src/streamlit
+        file: ./src/streamlit/Dockerfile.streamlit
+        push: false
+        tags: paris_sportifs_streamlit:latest
+
+    - name: Start Streamlit container
+      run: |
+        cd ./src/streamlit
+        docker-compose -f docker-compose_streamlit.yaml up -d
+        cd ../../
+        sleep 15
+
+
+
+  data_ml_functions_tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.10.12
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r ./.github/workflows/requirements_pytest.txt
+
+    - name: Run tests
+      run: |
+        cd ./src/data_ml_functions
+        pytest unit_test.py
+
+
+  api_tests:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.10.12
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r ./.github/workflows/requirements_pytest.txt
+
+    - name: Run tests
+      run: |
+        cd ./src/api
+        pytest unit_test.py
+    
