@@ -1,0 +1,22 @@
+services:
+
+  # Streamlit container
+  container_streamlit:
+    image: paris_sportifs_streamlit:latest
+    container_name: STREAMLIT_container
+    env_file:
+      - streamlit.env
+    ports:
+      - "8000:8000" # If you change stream.env PORT, change it here too like <new_port>:8000
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - common_network
+
+networks:
+  common_network:
+    external: true

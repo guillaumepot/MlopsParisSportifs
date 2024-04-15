@@ -1,0 +1,24 @@
+services:
+  # API Container
+  container_api:
+    image: paris_sportifs_api:latest
+    container_name: API_container
+    env_file:
+      - api.env
+    ports:
+      - "8001:8001" # If you change api.env PORT, change it here too like <new_port>:8001
+    volumes:
+      - ../../storage/database:/app/storage/database  # If you change api.env USER_DATABASE, change it here too like <storage_path>:<container_path>
+      - ../../storage/data/clean:/app/storage/data/clean # If you change api.env PATH_DATA_CLEAN, change it here too like <storage_path>:<container_path>
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8001"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    networks:
+      - common_network
+
+networks:
+  common_network:
+    external: true

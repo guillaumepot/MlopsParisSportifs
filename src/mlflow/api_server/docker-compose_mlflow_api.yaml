@@ -1,0 +1,18 @@
+services:
+  # Mlflow api server
+  container_mlflow:
+    image: paris_sportifs_mlflow_api_server:latest
+    container_name: MLFLOW_API_Container
+    env_file:
+      - mlflow_api.env
+    ports:
+      - "8003:8003"  # If you change mlflow_api.env PORT, change it here too like <new_port>:8003
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    volumes:
+      - ../../../storage/mlflow:/app/storage/mlflow # If you change mlflow_api.env PRODTION_MODEL, change it here too like <storage_path>:<container_path>
+      

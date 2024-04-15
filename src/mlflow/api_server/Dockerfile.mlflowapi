@@ -1,0 +1,23 @@
+# Mlflow image
+FROM python:3.10
+
+# Define Workdir
+WORKDIR /app
+
+# Add requirements file
+COPY ./requirements_mlflow_api.txt ./requirements_mlflow_api.txt
+
+# Install packages specified in requirements.txt
+RUN pip install --no-cache-dir -r requirements_mlflow_api.txt
+
+# Copy the rest of the working directory contents into the container at /app
+COPY . /app
+
+# Port to expose
+EXPOSE 8003
+
+# Define environment variable
+ENV PYTHONPATH=/app
+
+# Start streamlit server
+CMD mlflow models serve -m $PRODUCTION_MODEL --HOST $HOST --port $PORT

@@ -1,0 +1,25 @@
+services:
+  # Mlflow container
+  container_mlflow:
+    image: paris_sportifs_mlflow_tracking_server:latest
+    container_name: MLFLOW_Container
+    env_file:
+      - tracking.env
+    ports:
+      - "8002:8002"  # If you change tracking.env PORT, change it here too like <new_port>:8002
+    restart: always
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8002"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    volumes:
+      - ../../../storage/models:/app/storage/models
+      - ../../../storage/mlflow:/app/storage/mlflow # If you change mlflow.env MLFLOW_TRACKING_URI, change it here too like <storage_path>:<container_path>
+
+    networks:
+      - common_network
+
+networks:
+  common_network:
+    external: true
